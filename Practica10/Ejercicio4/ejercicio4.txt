@@ -1,0 +1,12 @@
+public int obtenerMaximo () {
+    if (root == null) {
+        return -1;
+    }
+
+    NodoArbolB nodo = root;
+    while (!nodo.leaf) {
+        nodo = nodo.child[nodo.n];
+    }
+
+    return nodo.key[nodo.n - 1];
+}
